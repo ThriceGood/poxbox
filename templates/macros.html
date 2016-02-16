@@ -1,0 +1,31 @@
+<!-- macros are an easy way to reuse code, very helpful -->
+
+<!-- for rendering a form field -->
+{% macro render_field(field) %}
+	<div class="field">
+		<!-- if errors associated with this field -->
+		{% if field.errors %}
+			<!-- render them -->
+			{% for error in field.errors %}
+				<div class="notification error">
+					{{ error }}
+				</div>
+			{% endfor %}
+		{% endif %}
+		{{ field(placeholder=field.label.text) }}
+	</div>
+{% endmacro %}
+
+<!-- for rendering flash messages -->
+{% macro flash_messages() %}
+	<!-- get the flshed messages from the session -->
+	{% with messages = get_flashed_messages(with_categories=True) %}
+		<!-- if there are any -->
+		{% if messages %}
+			<!-- iterate through them and render them -->
+			{% for category, message in messages %}
+				<div class="alert-box {{ category }}">{{ message }}</div>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+{% endmacro %}

@@ -1,0 +1,28 @@
+<!-- import macros -->
+{% from 'macros.html' import render_field %}
+<!-- inherites from base html -->
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+	<a href="{{ url_for('index') }}">
+		<img class="displayed" src="{{ url_for('static', filename='images/poxbox.png') }}">
+	</a>
+	<br>
+
+	<!-- registration form -->
+	<div class="form">
+		<form method="POST" action="" class="form">
+			<div class="form-group">
+				<!-- render form fields -->
+				{{ form.hidden_tag() }}
+				{% for field in form %}
+					{{ render_field(field) }}
+				{% endfor %}
+			</div>
+			<button class="btn btn-default" type="submit" id='submit'>Register</button>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

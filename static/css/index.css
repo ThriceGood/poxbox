@@ -1,0 +1,89 @@
+a.delbtn {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+div.top-links {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+span.folder-label {
+    font-size: 140%;
+}
+
+a {
+    color: green;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+img.folder {
+    width: 100px;
+    height: 90px;
+}
+
+img.file {
+    width: 90px;
+    height: 80px;
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.form {
+    display: block;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.alert-box {
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:10px 10px 10px 36px;
+    margin:10px;
+    width:300px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.error {
+    background:#ffecec no-repeat 10px 50%;
+    border:1px solid #f5aca6;
+    text-align: center;
+}
+.success {
+    background:#e9ffd9 no-repeat 10px 50%;
+    border:1px solid #a6ca8a;
+    text-align: center;
+}
+.message {
+    background:#fff8c4 no-repeat 10px 50%;
+    border:1px solid #f2c779;
+    text-align: center;
+}
+.notice {
+    background:#e3f7fc no-repeat 10px 50%;
+    border:1px solid #8ed9f6;
+    text-align: center;
+}

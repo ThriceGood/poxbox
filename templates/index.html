@@ -1,0 +1,93 @@
+<!-- import macros -->
+{% from 'macros.html' import flash_messages, render_field %}
+<!-- inherits from base html -->
+{% extends "base.html" %}
+{% block content %}
+
+<!-- top bar nav links -->
+<div class="top-links">
+<a class="btn btn-default" href="{{ url_for('logout') }}">Logout</a>
+</div>
+<hr>
+
+<!-- flashed messages appear here -->
+{{ flash_messages() }}
+
+<div class="container">
+
+<h3>Directories</h3>
+<br>
+<br>
+
+<!-- setting a loop counter -->
+{% set count = 0 %}
+
+<!-- iterate through user sub directories -->
+{% for dir in dirs %}
+
+	<!-- i want a new row every 4 directories, so i increment a counter
+	every time a directory is link is created, so if the count variable
+	mod 4 = 0 then we have 4 directories so create the new row div and 
+	close the previous row div. The reason we get the very first row
+	div is because 0 mod any number = 0 -->
+
+	<!-- open row div -->
+	{% if count % 4 == 0 %}
+		<div class="row">
+	{% endif %}
+
+		<!-- new column for directory link -->
+		<div class="col-sm-3">
+
+			<a href="{{ url_for('changeDir', dirname='') }}{{ dir }}">
+				<img class="folder" src="{{ url_for('static', filename='images/folder_green.png') }}">
+			</a>
+			<span class="folder-label"> &nbsp&nbsp {{ dir }}</span>
+
+		</div>	
+
+	<!-- increment the counter -->
+	{% set count = count + 1 %}
+
+	<!-- close row div -->
+	{% if count % 4 == 0 %}
+		</div>
+		<br>
+	{% set count = 0 %}
+	{% endif %}
+
+	<!-- if its the last loop and count is not = 0 then close 
+	the row dive. This is here to close the row div when
+	and uneven number of directories are left in the last row 
+	this is why the count is reset to 0 on every 4 directories -->
+	{% if loop.last and count != 0 %}
+		</div>
+	{% endif %}
+
+{% endfor %}
+
+
+<br>
+<br>
+
+<!-- create new sub directory -->
+<button class="btn btn-default" onclick="mkdir()">create directory</button>
+
+</div>
+
+<script type="text/javascript">
+	
+	// direct to directory creation url if conditions permit
+	function mkdir() {
+		var dirname = prompt('enter directory name');
+		if (dirname !== '') {
+			document.location = '{{ url_for("createDir", dirname="") }}'+dirname;
+		}
+		else {
+			alert('you mest enter a directory name')
+		}
+	}
+
+</script>
+
+{% endblock %}

@@ -86,7 +86,7 @@ Take the visual tour!
 
 ![alt tag](https://raw.githubusercontent.com/ThriceGood/poxbox/master/pictures/17.png)
 
-**The directory and its contents were deleted an we are redirected to our home page**
+**The directory and its contents were deleted and we are redirected to our home page**
 
 ![alt tag](https://raw.githubusercontent.com/ThriceGood/poxbox/master/pictures/18.png)
 

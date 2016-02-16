@@ -48,7 +48,7 @@ Take the visual tour!
 
 ![alt tag](https://raw.githubusercontent.com/ThriceGood/poxbox/master/pictures/7.png)
 
-**This is our home page, our base directory where all our sub directories will be**
+**This is our home page, our base directory where all our sub directories will be, each user has their own seperate home directory**
 
 ![alt tag](https://raw.githubusercontent.com/ThriceGood/poxbox/master/pictures/8.png)
 

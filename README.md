@@ -92,6 +92,10 @@ Take the visual tour!
 
 ![alt tag](https://raw.githubusercontent.com/ThriceGood/poxbox/master/pictures/18.png)
 
+**Just click on a file to download it**
+
+![alt tag](https://raw.githubusercontent.com/ThriceGood/poxbox/master/pictures/21.png)
+
 **The directories and files are neatly arranged in a bootstrap grid**
 
 ![alt tag](https://raw.githubusercontent.com/ThriceGood/poxbox/master/pictures/19.png)

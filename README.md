@@ -16,6 +16,8 @@ POXBOX is a small cload storage application build using the Flask microframework
 
 POXBOX displays a working knowledge of the above modules and interactions with the computers file system using Python, also some basic jinja, HTML, CSS and JS.
 
+(bare in mind that Github is displaying the code with a tab size equal to 8 spaces, however i code with a tab size of 4 spaces, to view with a tab size equal to 4 you can append '?ts=4' to any code page)
+
 Take the visual tour!
 
 **First up is the login page, lets start as a fresh user**
